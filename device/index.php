@@ -24,7 +24,7 @@ $_SESSION['userurl'] = $_SERVER['REQUEST_URI'];
 <div class="page-bd">
 	<div class="weui_cells_title">请先选择登陆方式,使用微博账号或者QQ账号</div>
         <div class="weui_btn_area">
-		<a href="<?php echo '/callback.php'?>" target="_parent" class="weui_btn weui_btn bg-blue">登陆</a>
+		<a href="<?php echo './callback.php'?>" target="_parent" class="weui_btn weui_btn bg-blue">登陆</a>
         </div>
 </div>
     
