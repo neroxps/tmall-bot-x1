@@ -1,24 +1,26 @@
 <?php
 include_once( '../server.php' );
-session_start();
+// session_start();
 
-if(empty($_SESSION)||empty($_SESSION['userinfo']))
-{
-        $_SESSION['userurl'] = $_SERVER['REQUEST_URI'];
-	header("Location: /index.php");
-}
-$user_id = $_SESSION['userinfo']['user_id'];
-$user_name = $_SESSION['userinfo']['user_name'];
-$fromwhere = $_SESSION['userinfo']['from'];
-$information = getUserInformation($user_id);
-if ($information['homeassistantURL']==null)
-{
-	echo '新用户';
-	die;
-	$homeassistantURL = 'your homeassistant URL';
-	$homeassistantPASS = 'your homeassistant PASSWORD';
-	$email = 'your email';
-}
+// if(empty($_SESSION)||empty($_SESSION['userinfo']))
+// {
+//         $_SESSION['userurl'] = $_SERVER['REQUEST_URI'];
+// 	header("Location: /index.php");
+// }
+// $user_id = $_SESSION['userinfo']['user_id'];
+// $user_name = $_SESSION['userinfo']['user_name'];
+// $fromwhere = $_SESSION['userinfo']['from'];
+// $information = getUserInformation($user_id);
+// if ($information['homeassistantURL']==null)
+// {
+// 	echo '新用户';
+// 	die;
+// 	$homeassistantURL = 'your homeassistant URL';
+// 	$homeassistantPASS = 'your homeassistant PASSWORD';
+// 	$email = 'your email';
+// }
+
+$user_id = 'user001'
 $homeassistantURL = $information['homeassistantURL'];
 $homeassistantPASS = $information['homeassistantPASS'];
 $email = $information['email'];
@@ -152,19 +154,19 @@ for($i=0;$i<$num;++$i){
 <meta charset="utf-8">
 <title>天猫精灵设备添加</title>
  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-  <link rel="stylesheet" href="weui/style/weuix.min.css"/>
+  <link rel="stylesheet" href="../weui/style/weuix.min.css"/>
   
   <!--
-    <link rel="icon" href="weui/favicon.ico">
+    <link rel="icon" href="../weui/favicon.ico">
 
 
       
 -->
-      <script src="weui/zepto.min.js"></script>
-      <script src="weui/vue.js"></script>
-      <script src="weui/vue-resource.js"></script>
-      <script src="weui/select.js"></script>
-      <script src="weui/picker.js"></script>
+      <script src="../weui/zepto.min.js"></script>
+      <script src="../weui/vue.js"></script>
+      <script src="../weui/vue-resource.js"></script>
+      <script src="../weui/select.js"></script>
+      <script src="../weui/picker.js"></script>
       <style>
          .weui_label {
     		display: block;

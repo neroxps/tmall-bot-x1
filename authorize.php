@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 require_once __DIR__.'/server.php';
 
 $request = OAuth2\Request::createFromGlobals();
@@ -17,11 +17,11 @@ if (!$server->validateAuthorizeRequest($request, $response)) {
     die;
 }
 // display an authorization form
-if(empty($_SESSION)||empty($_SESSION['userinfo']))
-{
-	$_SESSION['userurl'] = $_SERVER['REQUEST_URI'];
-	header("Location: /index.php");
-}
+// if(empty($_SESSION)||empty($_SESSION['userinfo']))
+// {
+// 	$_SESSION['userurl'] = $_SERVER['REQUEST_URI'];
+// 	header("Location: /index.php");
+// }
 if (empty($_POST)) {
 exit('
   <!doctype html>

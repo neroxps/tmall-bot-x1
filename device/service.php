@@ -1,13 +1,13 @@
 <?php
 require_once '../server.php';
-session_start();
-if(empty($_SESSION['userinfo'])){
-        $_SESSION['userurl'] = $_SERVER['REQUEST_URI'];
-        echo "{\"code\" : \"v\",\"Msg\":\"v\"}";
-	die;
-}
-$user_id = $_SESSION['userinfo']['user_id'];
-
+// session_start();
+// if(empty($_SESSION['userinfo'])){
+//         $_SESSION['userurl'] = $_SERVER['REQUEST_URI'];
+//         echo "{\"code\" : \"v\",\"Msg\":\"v\"}";
+// 	die;
+// }
+// $user_id = $_SESSION['userinfo']['user_id'];
+$user_id = 'user001'
 
 $v = isset($_GET['v']) ? $_GET['v'] : "v";
 if ($v=="v"){
