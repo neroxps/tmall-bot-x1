@@ -1,5 +1,5 @@
 <?php
-require_once '../server.php';
+require_once ( '../server.php' );
 // session_start();
 // if(empty($_SESSION['userinfo'])){
 //         $_SESSION['userurl'] = $_SERVER['REQUEST_URI'];

@@ -1,13 +1,3 @@
-<!-- 
-<?php
-// session_start();
-// if(empty($_SESSION)||empty($_SESSION['userinfo'])){        
-// $_SESSION['userurl'] = $_SERVER['REQUEST_URI'];
-//         header("Location: /device/index.php");
-
-// }
-?> -->
-
 <!doctype html>
 <html xmlns:wb="http://open.weibo.com/wb">
 <head>
@@ -15,17 +5,17 @@
 
 <title>天猫精灵设备管理</title>
  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-  <link rel="stylesheet" href="../weui/style/weuix.min.css"/>
+  <link rel="stylesheet" href="/weui/style/weuix.min.css"/>
   <link rel="icon" href="https://home-assistant.io/demo/favicon-192x192.png">
 
 
       
 <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-      <script src="../weui/zepto.min.js"></script>
-      <script src="../weui/vue.js"></script>
-      <script src="../weui/vue-resource.js"></script>
-      <script src="../weui/select.js"></script>
-      <script src="../weui/picker.js"></script>
+      <script src="/weui/zepto.min.js"></script>
+      <script src="/weui/vue.js"></script>
+      <script src="/weui/vue-resource.js"></script>
+      <script src="/weui/select.js"></script>
+      <script src="/weui/picker.js"></script>
       <style>
          .weui_label {
     		display: block;
