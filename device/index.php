@@ -5,7 +5,7 @@ session_start();
 
 if(!empty($_SESSION['userinfo']))
 {
-	header("Location: /information.php");
+	header("Location: /device/discovery.php");
 }
 $_SESSION['userurl'] = $_SERVER['REQUEST_URI'];
 

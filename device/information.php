@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once( 'server.php' );
+include_once( '../server.php' );
 
 error_log(empty($_SESSION));
 if(empty($_SESSION)||empty($_SESSION['userinfo']))

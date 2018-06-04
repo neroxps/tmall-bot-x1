@@ -1,5 +1,5 @@
 <?php
-include_once( 'server.php' );
+include_once( '../server.php' );
 if(empty($_SESSION)||empty($_SESSION['userinfo']))
 {
         $_SESSION['userurl'] = $_SERVER['REQUEST_URI'];

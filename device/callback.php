@@ -1,9 +1,9 @@
 <?php
         session_start();
 	$_SESSION['userinfo'] = array(
-		'user_name' => '测试用户',
-		'email' => 'xxx',
-		'user_id' => 'c1pher001'.$uid,
+		'user_name' => '个人用户',
+		'email' => 'email@email.como',
+		'user_id' => 'user001'.$uid,
 		'from' => 'c1pher-git'
 	);
 	// 注意至少要带上一个链接。
@@ -18,7 +18,7 @@
 		$_SESSION['userurl']='null';
 	}else
 	{  
-		header("Location: /information.php");
+		header("Location: /device/discovery.php");
 	}
 
 ?>
