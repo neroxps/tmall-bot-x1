@@ -508,7 +508,7 @@ var vm = new Vue({
             //alert("保存成功！");
               if(res.data.code=="ok"){
               	$.toast(res.data.Msg);
-                 window.setTimeout("window.location.href='discovery.php';",2000); 
+                 window.setTimeout("window.location.href='index.php';",2000); 
               }else{
               	$.toast(res.data.Msg, "forbidden");
               }
@@ -521,7 +521,7 @@ var vm = new Vue({
 
     },
     backToDevList:function(){
-      window.location.href='discovery.php';
+      window.location.href='index.php';
     },
     getDevice:function(){
 
