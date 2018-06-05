@@ -7,7 +7,7 @@ require_once ( '../server.php' );
 // 	die;
 // }
 // $user_id = $_SESSION['userinfo']['user_id'];
-$user_id = 'user001'
+$user_id = 'user001';
 
 $v = isset($_GET['v']) ? $_GET['v'] : "v";
 if ($v=="v"){

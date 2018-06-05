@@ -18,7 +18,8 @@ include_once( '../server.php' );
 //  $homeassistantPASS = 'your homeassistant PASSWORD';
 //  $email = 'your email';
 // }
-$user_id = 'user001'
+$user_id = 'user001';
+$information = getUserInformation($user_id);
 $homeassistantURL = $information['homeassistantURL'];
 $homeassistantPASS = $information['homeassistantPASS'];
 $email = $information['email'];

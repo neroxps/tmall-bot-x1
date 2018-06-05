@@ -74,7 +74,7 @@
 		</a>
 	</div>
 	<div class="weui_btn_area">
-		<a href="information.php" target="_parent" class="weui_btn weui_btn bg-blue">返回HomeAssistant基础配置</a>
+		<a href="https://open.bot.tmall.com/account/login" target="_blank" class="weui_btn weui_btn bg-blue">开发者管理平台</a>
 	</div>  
 </div>
 <div class="page-bd"> 

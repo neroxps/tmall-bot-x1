@@ -10,7 +10,7 @@ include_once( '../server.php' );
 // $user_id = $_SESSION['userinfo']['user_id'];
 // $user_name = $_SESSION['userinfo']['user_name'];
 // $fromwhere = $_SESSION['userinfo']['from'];
-$user_id = 'user001'
+$user_id = 'user001';
 $information = getUserInformation($user_id);
 
 // if ($information['homeassistantURL']==null)
