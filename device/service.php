@@ -90,7 +90,7 @@ elseif ($v=="del"){
     } 
 	
 
-	echo json_encode($a);
+	//echo json_encode($a);
     //echo "{\"deviceName\" : \"$deviceName\",\"deviceId\":\"$deviceId\",\"jsonData\":\"$count\"}";
 }
 
