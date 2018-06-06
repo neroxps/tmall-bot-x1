@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:wb="http://open.weibo.com/wb">
+<html>
 <head>
 <meta charset="utf-8">
 
@@ -10,7 +10,7 @@
 
 
       
-<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
       <script src="/weui/zepto.min.js"></script>
       <script src="/weui/vue.js"></script>
       <script src="/weui/vue-resource.js"></script>
@@ -120,7 +120,6 @@ var vm = new Vue({
 	},
 		created:function(){
 				const that=this;
-				that.getNotice();
 				that.getData();
 	},
 		methods: {
@@ -200,28 +199,6 @@ var vm = new Vue({
 								$.toast(res.data.Msg, "forbidden");
 							}
 					},function (res) {
-						console.log(res);
-							$.toast("网络错误", "cancel");
-
-					}
-				);
-		},
-				getNotice:function(){
-				//$.toast("ret");
-				const that=this;   
-				var timestamp =Date.parse(new Date());
-				var url ='service.php?v=getNotice';
-				console.log(url);
-				this.$http.post(
-						url,
-						{},
-						{emulateJSON:true}
-
-						).then(
-					function (res) {
-								//$.toast(res.data.Msg);
-			//that.notice='
-		},function (res) {
 						console.log(res);
 							$.toast("网络错误", "cancel");
 

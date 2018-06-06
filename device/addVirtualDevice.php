@@ -426,7 +426,6 @@ var vm = new Vue({
   },
     created:function(){
         const that=this;
-        that.getNotice();
         that.getDevice();
         //$.toast("错误：", "forbidden");
   },
@@ -559,37 +558,7 @@ var vm = new Vue({
 
         //   }
         // );
-        },
-
-        getNotice:function(){
-        //$.toast("ret");
-        const that=this;
-        var timestamp =Date.parse(new Date());
-        var url ='service.php?v=getNotice';
-        console.log(url);
-        this.$http.post(
-            url,
-            {},
-            {emulateJSON:true}
-
-            ).then(
-          function (res) {
-            console.log(res.data);
-              if(res.data.code=="ok"){
-              	//$.toast(res.data.Msg);
-                 that.notice=res.data.data;
-
-              }else{
-              	$.toast("错误!"+res.data.Msg, "forbidden");
-              }
-          },function (res) {
-            console.log(res);
-              $.toast("网络错误", "cancel");
-
-          }
-        );
-
-    }
+        }
     }
 })
 

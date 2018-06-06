@@ -460,7 +460,6 @@ var vm = new Vue({
   },
     created:function(){
         const that=this;
-        that.getNotice();
         
 
   },
@@ -552,34 +551,6 @@ var vm = new Vue({
               if(res.data.code=="ok"){
               	$.toast(res.data.Msg);
                  window.setTimeout("window.location.href='index.php';",2000); 
-              }else{
-              	$.toast(res.data.Msg, "forbidden");
-              }
-          },function (res) {
-            console.log(res);
-              $.toast("网络错误", "cancel");
-
-          }
-        );
-
-    },
-        getNotice:function(){
-        //$.toast("ret");
-        const that=this;   
-        var timestamp =Date.parse(new Date());
-        var url ='service.php?v=getNotice';
-        console.log(url);
-        this.$http.post(
-            url,
-            {},
-            {emulateJSON:true}
-
-            ).then(
-          function (res) {
-            console.log(res.data);
-              if(res.data.code=="ok"){
-              	//$.toast(res.data.Msg);
-                 that.notice=res.data.data; 
               }else{
               	$.toast(res.data.Msg, "forbidden");
               }
