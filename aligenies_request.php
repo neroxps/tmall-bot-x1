@@ -456,6 +456,9 @@ function  Device_control($obj)
 	case 'Previous':
 		$action='media_previous_track';
 		break;
+	case 'SelectChannel':
+		$action='select_source';
+		break;
 	default:
 		break;
 	}
@@ -465,7 +468,7 @@ function  Device_control($obj)
 		$response->put_control_response(False,$response_name,$deviceId,"not support","action or device not support,name:".$obj->header->name." device:".substr($deviceId,0,stripos($deviceId,".")));
 		return $response;
 	}
-	if($obj->header->name == "SetBrightness" || $obj->header->name == "SetVolume" || $obj->header->name == "SetColor" || $obj->header->name == "SetMode" || $obj->header->name == "CancelMode")
+	if($obj->header->name == "SetBrightness" || $obj->header->name == "SetVolume" || $obj->header->name == "SelectChannel" || $obj->header->name == "SetColor" || $obj->header->name == "SetMode" || $obj->header->name == "CancelMode")
 	{
 		$value = $obj->payload->value;
 		if ($action=="volume_mute")
@@ -486,6 +489,13 @@ function  Device_control($obj)
 			$post_array = array (
 				"entity_id" => $deviceId,
 				"volume_level" => $value
+			);
+		}
+		if ($action=="select_source")
+		{	
+			$post_array = array (
+				"entity_id" => $deviceId,
+				"source" => $value
 			);
 		}
 		if ($action=="set_bright")
@@ -559,7 +569,7 @@ function  Device_control($obj)
 			);
 		}
 		$post_string = json_encode($post_array);
-		#error_log($post_string);
+		error_log($post_string);
     		$opts = array(
 			'http' => array(
 				 'method' => "POST",
@@ -569,7 +579,7 @@ function  Device_control($obj)
 			);
 		$context = stream_context_create($opts);
 		$http_post = $URL."/api/services/".$device_ha."/".$action."?api_password=".$PASS;
-		#error_log($http_post);
+		error_log($http_post);
 		$pdt_response = file_get_contents($http_post, false, $context);
 		$response = new Response();
 		$response->put_control_response(True,$response_name,$deviceId,"","");	
