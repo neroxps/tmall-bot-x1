@@ -156,7 +156,7 @@ class Response{
 }
 function  Device_status($obj)
 {       
-	$user_id=getUseridFromAccesstoken($obj->payload->accessToken);
+	$user_id='user001';
 	if ($user_id=== 0)
 	{error_log('-------');
 		die;
@@ -313,7 +313,7 @@ function  Device_status($obj)
 }	
 function  Device_control($obj)
 {
-	$user_id=getUseridFromAccesstoken($obj->payload->accessToken);
+	$user_id='user001';
 	error_log($user_id);
 	if ($user_id=== 0)
 	{
