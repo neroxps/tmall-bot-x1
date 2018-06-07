@@ -26,7 +26,7 @@ $messageId = $uuid;
 $poststr = file_get_contents("php://input");
 $obj = json_decode($poststr);
 
-$user_id = getUseridFromAccesstoken($obj->payload->accessToken);
+$user_id = 'user001';
 error_log($obj->payload->accessToken);
 #error_log($user);
 if ($user=== 0)
