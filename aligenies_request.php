@@ -595,19 +595,19 @@ function  Device_control($obj)
 		{
 			if ($mode=='heat')
 			{
-				$value="heat"
+				$value="heat";
 			}
 			elseif($mode=='cold')
 			{
-				$value="cool"
+				$value="cool";
 			}
 			elseif($mode=='ventilate' || $mode=='auto')
 			{
-				$value="fan_only"
+				$value="fan_only";
 			}	
-			else($mode=='dehumidification')
+			elseif($mode=='dehumidification')
 			{
-				$value="dry"
+				$value="dry";
 			}	
 			$post_array = array (
  				"entity_id" => $deviceId,
@@ -633,7 +633,7 @@ function  Device_control($obj)
 			}
 			elseif($value=="2")
 			{
-				value="Middle"
+				value="Middle";
 			}	
 			else
 			{
