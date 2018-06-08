@@ -633,7 +633,7 @@ function  Device_control($obj)
 			}
 			elseif($value=="2")
 			{
-				value="Middle";
+				$value="Middle";
 			}	
 			else
 			{
